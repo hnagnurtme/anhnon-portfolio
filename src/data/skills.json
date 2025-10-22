@@ -1,0 +1,39 @@
+{
+    "Programming Languages": [
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "C#",
+        "C++"
+    ],
+    "Frameworks": [
+        "SpringBoot",
+        "ExpressJS",
+        ".NET",
+        "ReactJS"
+    ],
+    "Databases": [
+        "MySQL",
+        "SQL Server",
+        "Postgres",
+        "MongoDB",
+        "Firestore"
+    ],
+    "Deployment Platforms": [
+        "Vercel",
+        "Render"
+    ],
+    "Tools": [
+        "Git",
+        "GitHub",
+        "Docker",
+        "Postman",
+        "Figma"
+    ],
+    "Soft Skills": [
+        "Teamwork",
+        "Problem-solving",
+        "Communication"
+    ]
+}
