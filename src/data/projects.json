@@ -1,0 +1,117 @@
+[
+  {
+    "title": "AI-PRACNS",
+    "name": "AI-Powered Resource Allocation for Cloud and Network Systems",
+    "duration": "Aug 2025 - Present",
+    "teamSize": 2,
+    "role": "Lead Developer, AI & Simulation Architect",
+    "description": "Designed and implemented a comprehensive intelligent routing system for SAGSINs. Utilizes Reinforcement Learning for dynamic, multi-objective resource allocation, contrasting performance against Dijkstra under severe network conditions.",
+    "responsibilities": [
+      "Architected and implemented the core multi-layered system (Simulation, Network, AI, Management) using Java Spring Boot and Python microservices.",
+      "Developed the RL Agent (DQN) in PyTorch to generate optimal routing paths based on real-time metrics (queue occupancy, link status).",
+      "Designed and implemented socket programming (TCP/UDP) and multithreading for packet transmission and real-time state synchronization across all network nodes (LEO, MEO, GEO).",
+      "Built the Streamlit-based Simulation Client for real-time visualization and comparative analysis of RL vs. Dijkstra performance.",
+      "Managed network configurations via sagsins-core-service and MongoDB, and integrated Cesium API for 3D orbital visualization on React UI."
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "ReactJS",
+      "Streamlit",
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MongoDB",
+      "Docker",
+      "REST API",
+      "Socket Programming"
+    ],
+    "github": "https://github.com/hnagnurtme/AI-PRACNS",
+    "images": [
+    "image/domicare/Picture.png",
+    "image/domicare/Picture2.png",
+    "image/domicare/Picture3.png",
+    "image/domicare/Picture4.png",
+    "image/domicare/Picture5.png",
+    "image/domicare/Picture6.png"
+    ]
+  },
+  {
+    "title": "DOMICARE",
+    "name": "Cleaning Service Website",
+    "duration": "Feb 2025 - May 2025",
+    "teamSize": 3,
+    "role": "Backend Developer",
+    "description": "DomiCare is a Web API platform for managing and booking cleaning services with role-based access for customers, sales staff, and administrators.",
+    "responsibilities": [
+      "Designed and implemented the cloud-based database using Railway Postgres.",
+      "Secured the system with JWT, Spring Security, SSL Certificate, and OAuth2.",
+      "Integrated Email Service for verification and notification.",
+      "Implemented WebSocket for real-time features like live updates and notifications.",
+      "Designed and developed RESTful APIs for full CRUD operations using three-layer architecture.",
+      "Provided API documentation using OpenAPI 3 (Swagger).",
+      "Dockerized the application and deployed it on Render."
+    ],
+    "technologies": [
+      "Spring Boot",
+      "Spring Security",
+      "WebSocket",
+      "JWT",
+      "OAuth2",
+      "PostgreSQL",
+      "OpenAPI 3",
+      "Render",
+      "Docker"
+    ],
+    "links": {
+      "website": "https://domicare.hnagnurtme.id.vn",
+      "figma": "https://url.gdsc.dev/domicare",
+      "github": "https://github.com/hnagnurtme/DomiCare_Website.git"
+    },
+    "images": [
+    "image/domicare/Picture.png",
+    "image/domicare/Picture2.png",
+    "image/domicare/Picture3.png",
+    "image/domicare/Picture4.png",
+    "image/domicare/Picture5.png",
+    "image/domicare/Picture6.png"
+    ]
+  },
+  {
+    "title": "AI-PRACNS",
+    "name": "AI-Powered Resource Allocation for Cloud and Network Systems (Copy 2)",
+    "duration": "Aug 2025 - Present",
+    "teamSize": 2,
+    "role": "Lead Developer, AI & Simulation Architect",
+    "description": "Designed and implemented a comprehensive intelligent routing system for SAGSINs. Utilizes Reinforcement Learning for dynamic, multi-objective resource allocation, contrasting performance against Dijkstra under severe network conditions.",
+    "responsibilities": [
+      "Architected and implemented the core multi-layered system (Simulation, Network, AI, Management) using Java Spring Boot and Python microservices.",
+      "Developed the RL Agent (DQN) in PyTorch to generate optimal routing paths based on real-time metrics (queue occupancy, link status).",
+      "Designed and implemented socket programming (TCP/UDP) and multithreading for packet transmission and real-time state synchronization across all network nodes (LEO, MEO, GEO).",
+      "Built the Streamlit-based Simulation Client for real-time visualization and comparative analysis of RL vs. Dijkstra performance.",
+      "Managed network configurations via sagsins-core-service and MongoDB, and integrated Cesium API for 3D orbital visualization on React UI."
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "ReactJS",
+      "Streamlit",
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MongoDB",
+      "Docker",
+      "REST API",
+      "Socket Programming"
+    ],
+    "github": "https://github.com/hnagnurtme/AI-PRACNS",
+    "images": [
+    "image/domicare/Picture.png",
+    "image/domicare/Picture2.png",
+    "image/domicare/Picture3.png",
+    "image/domicare/Picture4.png",
+    "image/domicare/Picture5.png",
+    "image/domicare/Picture6.png"
+    ]
+  }
+]

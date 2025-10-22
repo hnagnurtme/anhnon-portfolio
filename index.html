@@ -5,6 +5,45 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>anhnon-universe</title>
+    <style>
+      /* Tối ưu scroll không sử dụng CSS smooth scrolling */
+      html {
+        scroll-behavior: auto !important;
+      }
+      
+      body {
+        overflow-x: hidden;
+      }
+      
+      /* Khi có class này, tất cả animation sẽ bị vô hiệu hóa khi scroll */
+      .scrolling-active * {
+        animation-play-state: paused !important;
+        transition: none !important;
+      }
+    </style>
+    <script>
+      // Script để xử lý pause animation chỉ khi scroll
+      document.addEventListener('DOMContentLoaded', function() {
+        let isScrolling = false;
+        let scrollTimeout;
+        
+        // Khi scroll, tạm dừng tất cả animation
+        window.addEventListener('scroll', function() {
+          if (!isScrolling) {
+            isScrolling = true;
+            document.body.classList.add('scrolling-active');
+          }
+          
+          clearTimeout(scrollTimeout);
+          
+          // Đặt lại timeout để nhận diện khi dừng scroll
+          scrollTimeout = setTimeout(function() {
+            isScrolling = false;
+            document.body.classList.remove('scrolling-active');
+          }, 150); // Đợi 150ms sau khi scroll dừng
+        }, { passive: true });
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
