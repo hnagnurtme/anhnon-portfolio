@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================== Variables ================== */
 :root {
   --black: #000000;
   --dark-gray: #121212;
   --purple: #8b5cf6;
   --light-purple: #a78bfa;
   --pink: #ec4899;
-  
+
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -16,19 +17,25 @@
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--black);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ================== Global Reset ================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
+
+html, body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: auto; /* Tối ưu scroll performance */
+  overscroll-behavior: none;
+}
+
+/* ================== Typography ================== */
+h1 { font-size: 3.2em; line-height: 1.1; }
 
 a {
   font-weight: 500;
@@ -36,23 +43,18 @@ a {
   text-decoration: inherit;
   transition: color 0.3s ease;
 }
+a:hover { color: var(--light-purple); }
 
-a:hover {
-  color: var(--light-purple);
+.text-gradient {
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+.glow { text-shadow: 0 0 10px rgba(139, 92, 246, 0.7); }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* ================== Buttons ================== */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -64,6 +66,7 @@ button {
   color: white;
   cursor: pointer;
   transition: all 0.25s ease;
+  will-change: transform, box-shadow;
 }
 
 button:hover {
@@ -77,72 +80,64 @@ button:focus-visible {
   outline: 2px solid var(--pink);
 }
 
-/* Animated background */
-.animated-bg {
-  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
+/* ================== Card Hover ================== */
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.2s cubic-bezier(0.34,1.56,0.64,1),
+              border-color 0.2s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
 }
 
-/* Section animations */
+.card-hover:hover {
+  transform: translateY(-5px) scale(1.02) translateZ(0);
+  box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.5);
+}
+
+/* ================== Sections ================== */
 section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  opacity: 1;
+  transform: none;
+  contain: layout;
 }
 
 section.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
-/* Custom scrollbar */
+/* ================== Scrollbar ================== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
-::-webkit-scrollbar-track {
-  background: var(--dark-gray);
-}
-
+::-webkit-scrollbar-track { background: var(--dark-gray); }
 ::-webkit-scrollbar-thumb {
   background: var(--purple);
   border-radius: 4px;
 }
+::-webkit-scrollbar-thumb:hover { background: var(--light-purple); }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--light-purple);
+/* ================== Animated Background ================== */
+.animated-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
-/* Text gradient effect */
-.text-gradient {
-  background: linear-gradient(90deg, var(--purple), var(--pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ================== Motion & Particles ================== */
+.motion-element, .particle {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
 }
 
-/* Glow effect */
-.glow {
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
-}
-
+/* ================== Glow Borders ================== */
 .glow-border {
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
-}
-
-/* Card hover effects */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
 }
