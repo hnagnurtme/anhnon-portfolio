@@ -141,3 +141,20 @@ section.active {
 .glow-border {
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
 }
+
+/* global.css hoặc tailwind.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE và Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: start;
+}

@@ -14,8 +14,6 @@ const SkillsSection: React.FC = () => {
         if ( sectionRef.current && skillCardsRef.current ) {
             const cards = Array.from( skillCardsRef.current.children );
 
-            // Đăng ký một chuyển động dựa trên requestAnimationFrame
-            // thay vì dựa vào ScrollTrigger nặng nề
             const observer = new IntersectionObserver( ( entries ) => {
                 if ( entries[ 0 ].isIntersecting ) {
                     // Sử dụng requestAnimationFrame để đảm bảo animation mượt mà

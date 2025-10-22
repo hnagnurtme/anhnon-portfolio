@@ -214,9 +214,8 @@ const HeroSection: React.FC = () => {
                         className="text-5xl md:text-7xl font-bold mb-4 text-gradient glow"
                         whileHover={ { scale: 1.02 } }
                     >
-                        Hi, I'm { personalData.name.split( " " ).pop() } <span className="wave">👋</span>
+                        Hi, I'm { personalData.name.split(" ").slice(-2).join(" ") } <span className="wave">👋</span>
                     </motion.h1>
-
                     <motion.div variants={ item } className="flex items-center text-lg md:text-xl mb-8">
                         <span className="mr-2">I'm a</span>
                         <span className="typing-text text-purple-400"></span>
