@@ -3,12 +3,12 @@ import MainLayout from "./layouts/MainLayout";
 import HeroSection from "./components/sections/HeroSection";
 import AboutSection from "./components/sections/AboutSection";
 import SkillsSection from "./components/sections/SkillsSection";
+import ProjectsSection from "./components/sections/ProjectsSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import CertificationsSection from "./components/sections/CertificationsSection";
 import ContactSection from "./components/sections/ContactSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProjectCarousel from "./components/features/projects/ProjectCarousel";
 
 const App: React.FC = () => {
     // Register ScrollTrigger plugin
@@ -36,34 +36,13 @@ const App: React.FC = () => {
 
     return (
         <MainLayout>
-            <section id="hero" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <HeroSection />
-            </section>
-
-            <section id="about" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <AboutSection />
-            </section>
-
-            <section id="skills" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <SkillsSection />
-            </section>
-
-            <section id="projects" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <ProjectCarousel />
-            </section>
-
-            <section id="experience" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <ExperienceSection />
-            </section>
-
-            <section id="certifications" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <CertificationsSection />
-            </section>
-
-            <section id="contact" className="py-section-xs md:py-section-sm px-4 md:px-6">
-                <ContactSection />
-            </section>
-
+            <HeroSection />
+            <AboutSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <ExperienceSection />
+            <CertificationsSection />
+            <ContactSection />
         </MainLayout>
     );
 };

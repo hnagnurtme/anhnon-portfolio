@@ -6,7 +6,7 @@ import Education from "../features/Education";
 
 const AboutSection: React.FC = () => {
     return (
-        <section id="about" className="w-full py-20 bg-black text-white">
+        <section id="about" className="w-full py-4 md:py-6 bg-black text-white px-4 md:px-6 relative">
             <div className="max-w-7xl mx-auto px-0 sm:px-4">
                 <motion.h2
                     className="text-3xl font-bold text-center mb-12"

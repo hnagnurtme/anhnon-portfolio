@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import experienceData from "../../data/experience.json";
+import SectionTitle from "../ui/SectionTitle";
 
 interface Achievement {
     description: string;
@@ -17,17 +18,9 @@ interface Experience {
 
 const ExperienceSection: React.FC = () => {
     return (
-        <section id="experience" className="w-full py-20 bg-gray-900 text-white">
+        <section id="experience" className="w-full py-10 bg-gray-900 text-white">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <motion.h2
-                    className="text-3xl font-bold text-center mb-12"
-                    initial={ { opacity: 0, y: 20 } }
-                    whileInView={ { opacity: 1, y: 0 } }
-                    viewport={ { once: true } }
-                    transition={ { duration: 0.6 } }
-                >
-                    Experience
-                </motion.h2>
+                <SectionTitle title="Experience" />
 
                 <div className="space-y-12">
                     { ( experienceData as Experience[] ).map( ( exp ) => (

@@ -44,10 +44,10 @@ const ContactSection: React.FC = () => {
     };
 
     return (
-        <section id="contact" className="w-full py-20 bg-linear-to-b from-black to-gray-900 text-white">
+        <section id="contact" className="w-full py-10 bg-gray-900 text-white">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <motion.h2
-                    className="text-3xl font-bold text-center mb-12"
+                    className="text-3xl font-bold text-center mb-8"
                     initial={ { opacity: 0, y: 20 } }
                     whileInView={ { opacity: 1, y: 0 } }
                     viewport={ { once: true } }

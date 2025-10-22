@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import skillsData from "../../data/skills.json";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionTitle from "../ui/SectionTitle";
 
 gsap.registerPlugin( ScrollTrigger );
 
@@ -54,21 +54,9 @@ const SkillsSection: React.FC = () => {
     }, [] );
 
     return (
-        <section id="skills" ref={ sectionRef } className="w-full py-20 bg-gray-900">
+        <section id="skills" ref={ sectionRef } className="w-full py-10 bg-gray-900 text-white">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <motion.div
-                    initial={ { opacity: 0, y: -20 } }
-                    whileInView={ { opacity: 1, y: 0 } }
-                    transition={ { duration: 0.5 } }
-                    viewport={ { once: true } }
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl font-bold text-center mb-4 text-gradient">Skills</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
-                        My technical expertise and professional capabilities
-                    </p>
-                </motion.div>
-
+                <SectionTitle title="Skills" />
                 <div ref={ skillCardsRef } className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     { Object.entries( skillsData ).map( ( [ category, skills ] ) => (
                         <div
