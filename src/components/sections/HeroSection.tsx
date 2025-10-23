@@ -6,6 +6,7 @@ import personalData from "../../data/personal.json";
 import { AnimationContext } from "../../store/AnimationContext";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import FloatingParticles from "../ui/FloatingParticles";
 
 // Register TextPlugin for GSAP
 gsap.registerPlugin( TextPlugin );
@@ -166,6 +167,8 @@ const HeroSection: React.FC = () => {
             id="hero"
             className="w-full h-screen bg-linear-to-b from-gray-900 to-black flex flex-col items-center justify-center text-white relative overflow-hidden"
         >
+            {/* Star field background */ }
+            <FloatingParticles />
             {/* Particle effects - số lượng giảm để tối ưu hiệu suất */ }
             <div className="absolute inset-0 pointer-events-none">
                 { [ ...Array( 10 ) ].map( ( _, index ) => (
@@ -214,7 +217,7 @@ const HeroSection: React.FC = () => {
                         className="text-5xl md:text-7xl font-bold mb-4 text-gradient glow"
                         whileHover={ { scale: 1.02 } }
                     >
-                        Hi, I'm { personalData.name.split(" ").slice(-2).join(" ") } <span className="wave">👋</span>
+                        Hi, I'm { personalData.name.split( " " ).slice( -2 ).join( " " ) } <span className="wave">👋</span>
                     </motion.h1>
                     <motion.div variants={ item } className="flex items-center text-lg md:text-xl mb-8">
                         <span className="mr-2">I'm a</span>
@@ -302,9 +305,6 @@ const HeroSection: React.FC = () => {
                     </motion.div>
                 </motion.div>
             </div>
-
-            {/* Radial gradient background */ }
-            <div className="absolute inset-0 bg-radial-gradient from-purple-900/20 to-transparent z-0" />
         </section>
     );
 };
