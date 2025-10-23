@@ -12,7 +12,7 @@ const ParticipationCard: React.FC = () => {
     }, [] );
 
     return (
-        <div className="relative mx-auto max-w-md">
+        <div className="relative max-w-md ">
             {/* 2 ảnh xếp chéo */ }
             <motion.img
                 src={ CERT6 }

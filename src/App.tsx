@@ -6,7 +6,6 @@ import SkillsSection from "./components/sections/SkillsSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import ContactSection from "./components/sections/ContactSection";
-import ActivitiesSection from "./components/sections/ActivitiesSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -42,7 +41,6 @@ const App: React.FC = () => {
             <ProjectsSection />
             <ExperienceSection />
             <ContactSection />
-            <ActivitiesSection />
         </MainLayout>
     );
 };

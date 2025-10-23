@@ -1,51 +1,70 @@
 import React from "react";
 import { motion } from "framer-motion";
-import aboutData from "../../data/personal.json";
 import Video from "../ui/Video";
+import SectionTitle from "../ui/SectionTitle";
+import ParticipationCard from "./ActivitiesSection";
+import FloatingParticles from "../ui/FloatingParticles";
 
 const AboutSection: React.FC = () => {
     return (
-        <section id="about" className="w-full bg-black text-white px-0 md:px-0 flex justify-start items-center py-12">
+        <section id="about" className="w-full md:py-12 bg-black text-white relative px-6 md:px-20 py-20">
+            <FloatingParticles />
+            <SectionTitle title="About Me" />
+
             <div className="flex flex-col md:flex-row w-full gap-10 items-start">
 
                 {/* Video */ }
                 <motion.div
-                    className="flex-[2] "
+                    className="flex-[1] w-full md:w-auto"
                     initial={ { opacity: 0, x: -30 } }
                     whileInView={ { opacity: 1, x: 0 } }
                     viewport={ { once: true } }
                     transition={ { duration: 0.8, delay: 0.2 } }
                 >
-                    <Video
-                        src="/videos/DAILY1.webm"
-                        className="w-full h-full object-cover rounded-lg"
-                        aspectRatio={ 16 / 12 }
-                    />
+                    <Video src="/videos/DAILY1.webm" height={ 700 } />
                 </motion.div>
 
-                {/* About Me Info */ }
+                {/* About Info + ParticipationCard */ }
                 <motion.div
-                    className="flex-[1] bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-purple-800/30 flex flex-col justify-center"
+                    className="flex-[1] flex flex-col gap-6 w-full"
                     initial={ { opacity: 0, x: 50 } }
                     whileInView={ { opacity: 1, x: 0 } }
                     viewport={ { once: true } }
                     transition={ { duration: 0.8, delay: 0.4 } }
                 >
-                    <h3 className="text-3xl font-semibold mb-4 text-purple-400">{ aboutData.name }</h3>
-                    <p className="text-gray-300 mb-4">
-                        I am a passionate software engineer with a focus on web development and backend systems.
-                    </p>
-                    <p className="text-gray-300">
-                        With experience in various programming languages and frameworks, I enjoy solving complex problems.
-                    </p>
-                    <div className="mt-6 text-gray-300">
-                        <p><span className="font-semibold text-white">Role:</span> { aboutData.title }</p>
-                        <p><span className="font-semibold text-white">Location:</span> { aboutData.location }</p>
+                    <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-purple-800/30 flex flex-col justify-center ">
+                        <p className="text-gray-300 mb-4">
+                            I am a Java developer with a strong foundation in Java Core, OOP, and SOLID principles.
+                        </p>
+                        <p className="text-gray-300 mb-4">
+                            I have hands-on experience developing RESTful APIs with Spring Boot and working with MySQL.
+                        </p>
+                        <p className="text-gray-300">
+                            Proficient in Git/Gitflow and team collaboration, I am actively improving my English skills and eager to contribute to real-world projects in a professional development environment.
+                        </p>
+                    </div>
+                    <div className="max-w-md -ml-20  bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-800/30">
+                        <div className="flex justify-between items-start mb-2">
+                            <h4 className="font-bold text-white text-lg">
+                                Da Nang University of Science and Technology
+                            </h4>
+                            <span className="italic text-gray-300 text-sm">
+                                Expected Graduation in 2027
+                            </span>
+                        </div>
+                        <p className="text-gray-300 text-sm">Major: Information Technology</p>
+                        <p className="text-gray-300 text-sm">CPA: 3.69</p>
+                    </div>
+
+
+                    {/* ParticipationCard nằm dưới About Info */ }
+                    <div className="flex justify-end pr-6">
+                        <ParticipationCard />
                     </div>
                 </motion.div>
-
             </div>
         </section>
+
 
     );
 };
