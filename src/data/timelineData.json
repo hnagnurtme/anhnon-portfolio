@@ -1,0 +1,36 @@
+[
+    {
+        "id": "gdg-dut-1",
+        "title": "Backend Developer",
+        "name": "Google Developer Groups On Campus – DUT",
+        "duration": "Oct 2023 – Present",
+        "image": "image/timeline/CERT1.png"
+    },
+    {
+        "id": "gdg-dut-2",
+        "title": "Organizer - INFO SESSION 2024",
+        "name": "Google Developer Groups On Campus – DUT",
+        "duration": "Oct 2023",
+        "image": "image/timeline/CERT2.png"
+    },
+    { "id": "gdg-dut-3",
+        "title": "Volunteer - GOOGLE IO EXTENDED CLOUD DA NANG",
+        "name": "Google Developer Groups On Campus – DUT",
+        "duration": "Nov 2023",
+        "image": "image/timeline/CERT3.png"
+    },
+    {
+        "id": "gdg-dut-4",
+        "title": "Organizer - UniHack 2024",
+        "name": "Google Developer Groups On Campus – DUT",
+        "duration": "Jan 2024",
+        "image": "image/timeline/CERT4.png"
+    },
+    {
+        "id": "gdg-dut-5",
+        "title": "Developer - LOCALISM APAC Solution Challenge 2025",
+        "name": "Google Developer Groups On Campus – DUT",
+        "duration": "Mar 2025",
+        "image": "image/timeline/CERT5.png"
+    }
+]
