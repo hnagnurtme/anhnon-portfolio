@@ -1,71 +1,71 @@
 import React from "react";
 import { motion } from "framer-motion";
-import aboutData from "../../data/personal.json";
-import avatar from "../../assets/images/AVATAR.png";
-import Education from "../features/Education";
+import Video from "../ui/Video";
+import SectionTitle from "../ui/SectionTitle";
+import ParticipationCard from "./ActivitiesSection";
+import FloatingParticles from "../ui/FloatingParticles";
 
 const AboutSection: React.FC = () => {
     return (
-        <section id="about" className="w-full py-4 md:py-6 bg-black text-white px-4 md:px-6 relative">
-            <div className="max-w-7xl mx-auto px-0 sm:px-4">
-                <motion.h2
-                    className="text-3xl font-bold text-center mb-12"
-                    initial={ { opacity: 0, y: 20 } }
-                    whileInView={ { opacity: 1, y: 0 } }
+        <section id="about" className="w-full md:py-12 bg-black text-white relative px-6 md:px-20 py-20">
+            <FloatingParticles />
+            <SectionTitle title="About Me" />
+
+            <div className="flex flex-col md:flex-row w-full gap-10 items-start">
+
+                {/* Video */ }
+                <motion.div
+                    className="flex-[1] w-full md:w-auto"
+                    initial={ { opacity: 0, x: -30 } }
+                    whileInView={ { opacity: 1, x: 0 } }
                     viewport={ { once: true } }
-                    transition={ { duration: 0.6 } }
+                    transition={ { duration: 0.8, delay: 0.2 } }
                 >
-                    About Me
-                </motion.h2>
+                    <Video src="/videos/DAILY1.webm" height={ 700 } />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    {/* Avatar */ }
-                    <motion.div
-                        initial={ { opacity: 0, x: -30 } }
-                        whileInView={ { opacity: 1, x: 0 } }
-                        viewport={ { once: true } }
-                        transition={ { duration: 0.8, delay: 0.2 } }
-                        className="space-y-6"
-                    >
-                        {/* Avatar */ }
-                        <div className="w-[500px] h-[500px] relative -ml-4 md:-ml-0">
-                            <img
-                                src={ avatar }
-                                alt={ aboutData.name }
-                                className="w-full h-full object-cover rounded-lg"
-                            />
-                            <div className="absolute inset-0 rounded-lg shadow-[0_0_80px_rgba(139,92,246,0.7)] pointer-events-none"></div>
-                        </div>
-                        {/* Education Component */ }
-                        <Education />
-                    </motion.div>
-
-                    {/* About Me Info */ }
-                    <motion.div
-                        initial={ { opacity: 0, x: 50 } }
-                        whileInView={ { opacity: 1, x: 0 } }
-                        viewport={ { once: true } }
-                        transition={ { duration: 0.8, delay: 0.4 } }
-                        className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-purple-800/30 flex flex-col justify-center"
-                    >
-                        <h3 className="text-3xl font-semibold mb-4 text-purple-400">{ aboutData.name }</h3>
+                {/* About Info + ParticipationCard */ }
+                <motion.div
+                    className="flex-[1] flex flex-col gap-6 w-full"
+                    initial={ { opacity: 0, x: 50 } }
+                    whileInView={ { opacity: 1, x: 0 } }
+                    viewport={ { once: true } }
+                    transition={ { duration: 0.8, delay: 0.4 } }
+                >
+                    <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-purple-800/30 flex flex-col justify-center ">
                         <p className="text-gray-300 mb-4">
-                            I am a passionate software engineer with a focus on web development and backend systems.
-                            Currently pursuing my degree in Information Technology at Da Nang University of Science and Technology,
-                            I am dedicated to creating efficient and innovative software solutions.
+                            I am a Java developer with a strong foundation in Java Core, OOP, and SOLID principles.
+                        </p>
+                        <p className="text-gray-300 mb-4">
+                            I have hands-on experience developing RESTful APIs with Spring Boot and working with MySQL.
                         </p>
                         <p className="text-gray-300">
-                            With experience in various programming languages and frameworks, I enjoy solving complex problems
-                            and continuously learning new technologies to enhance my skills.
+                            Proficient in Git/Gitflow and team collaboration, I am actively improving my English skills and eager to contribute to real-world projects in a professional development environment.
                         </p>
-                        <div className="mt-6 text-gray-300">
-                            <p><span className="font-semibold text-white">Role:</span> { aboutData.title }</p>
-                            <p><span className="font-semibold text-white">Location:</span> { aboutData.location }</p>
+                    </div>
+                    <div className="max-w-md -ml-20  bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-800/30">
+                        <div className="flex justify-between items-start mb-2">
+                            <h4 className="font-bold text-white text-lg">
+                                Da Nang University of Science and Technology
+                            </h4>
+                            <span className="italic text-gray-300 text-sm">
+                                Expected Graduation in 2027
+                            </span>
                         </div>
-                    </motion.div>
-                </div>
+                        <p className="text-gray-300 text-sm">Major: Information Technology</p>
+                        <p className="text-gray-300 text-sm">CPA: 3.69</p>
+                    </div>
+
+
+                    {/* ParticipationCard nằm dưới About Info */ }
+                    <div className="flex justify-end pr-6">
+                        <ParticipationCard />
+                    </div>
+                </motion.div>
             </div>
         </section>
+
+
     );
 };
 

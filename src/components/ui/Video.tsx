@@ -1,37 +1,41 @@
 import React from "react";
 
 interface VideoProps {
-    src: string;
-    poster?: string;
-    className?: string;
-    aspectRatio?: number; // tỉ lệ = width / height, ví dụ 16/9 = 1.777
+  src: string;
+  poster?: string;
+  className?: string;
+  height?: string | number; // Chiều cao cố định, ví dụ '500px' hoặc 50% viewport
 }
 
-const Video: React.FC<VideoProps> = ( {
-    src,
-    poster,
-    className = "",
-    aspectRatio = 16 / 9,
-} ) => {
-    return (
-        <div
-            className={ `w-full relative ${ className }` }
-            style={ { paddingTop: `${ 100 / aspectRatio }%` } } // tạo container theo tỉ lệ
-        >
-            <video
-                src={ src }
-                poster={ poster }
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                className="absolute top-0 left-0 w-full h-full object-contain"
-            >
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    );
+const Video: React.FC<VideoProps> = ({
+  src,
+  poster,
+  className = "",
+  height,
+}) => {
+  const containerStyle: React.CSSProperties = height
+    ? { height: typeof height === "number" ? `${height}px` : height }
+    : { display: "inline-block" }; 
+
+  return (
+    <div
+      className={`relative ${className}`}
+      style={containerStyle}
+    >
+      <video
+        src={src}
+        poster={poster}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="w-auto h-full block rounded-2xl"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
 };
 
 export default Video;
