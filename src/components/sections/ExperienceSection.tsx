@@ -3,6 +3,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import TimelineCard, { type TimelineEvent } from "../features/experiences/TimelineCard";
 import timelineDataRaw from "../../data/timelineData.json";
 import SectionTitle from "../ui/SectionTitle";
+import FloatingParticles from "../ui/FloatingParticles";
 
 const timelineData: TimelineEvent[] = timelineDataRaw as TimelineEvent[];
 
@@ -55,6 +56,7 @@ const TimelineCarousel: React.FC = () => {
             id="experience"
             className="w-full py-8 md:py-12 bg-gray-900 text-whitepx-6 md:px-16 relative"
         >
+            <FloatingParticles />
 
             <SectionTitle title="Experience & Certifications" />
 

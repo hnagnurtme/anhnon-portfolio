@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "../ui/SectionTitle";
 import SkillCard from "../features/skills/SkillCard";
+import FloatingParticles from "../ui/FloatingParticles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,7 @@ const SkillsSection: React.FC = () => {
 
     return (
         <section id="skills" ref={sectionRef} className="w-full py-10 bg-gray-900 text-white">
+            <FloatingParticles />
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <SectionTitle title="Skills" />
                 <div ref={skillCardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
