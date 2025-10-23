@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import TimelineCard, { type TimelineEvent } from "../experiences/TimelineCard";
+import TimelineCard, { type TimelineEvent } from "../features/experiences/TimelineCard";
 import timelineDataRaw from "../../data/timelineData.json";
 import SectionTitle from "../ui/SectionTitle";
 
@@ -56,7 +56,7 @@ const TimelineCarousel: React.FC = () => {
             className="w-full py-8 md:py-12 bg-gray-900 text-whitepx-6 md:px-16 relative"
         >
 
-            <SectionTitle title="Experience" />
+            <SectionTitle title="Experience & Certifications" />
 
             <div className="relative max-w-full mx-auto px-16">
                 {/* Left Arrow */ }

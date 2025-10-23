@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "videoSrc": "/videos/DAILY1.webm",
+        "poster": "/images/intro1-poster.jpg",
+        "title": "Welcome to My Portfolio",
+        "description": "Discover my projects, skills, and achievements through interactive demos and videos."
+    },
+    {
+        "id": 2,
+        "videoSrc": "/videos/DAILY1.webm",
+        "poster": "/images/intro2-poster.jpg",
+        "title": "Frontend Developer Showcase",
+        "description": "I build responsive, modern web apps with React, TypeScript, and Tailwind CSS."
+    },
+    {
+        "id": 3,
+        "videoSrc": "/videos/DAILY1.webm",
+        "poster": "/images/intro3-poster.jpg",
+        "title": "Creative Coding Projects",
+        "description": "From interactive timelines to animated interfaces, explore the projects that highlight my creativity."
+    }
+]
