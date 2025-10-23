@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
     };
 
     return (
-        <section id="contact" className="w-full py-10 bg-gray-900 text-white">
+        <section id="contact" className="w-full py-10 bg-black text-white">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <motion.h2
                     className="text-3xl font-bold text-center mb-8"
