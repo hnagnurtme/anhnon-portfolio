@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import personalData from "../../data/personal.json";
 import Input from "../ui/Input";
 import FloatingParticles from "../ui/FloatingParticles";
+import SectionTitle from "../ui/SectionTitle";
 const ContactSection: React.FC = () => {
     const [ formState, setFormState ] = useState( {
         name: "",
@@ -47,15 +48,7 @@ const ContactSection: React.FC = () => {
         <section id="contact" className="w-full py-10 bg-black text-white">
             <FloatingParticles />
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <motion.h2
-                    className="text-3xl font-bold text-center mb-8"
-                    initial={ { opacity: 0, y: 20 } }
-                    whileInView={ { opacity: 1, y: 0 } }
-                    viewport={ { once: true } }
-                    transition={ { duration: 0.6 } }
-                >
-                    Get In Touch
-                </motion.h2>
+                <SectionTitle planet="Neptune" title="Reach Out" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Contact Form */ }
