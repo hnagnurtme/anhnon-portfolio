@@ -34,6 +34,7 @@ const App: React.FC = () => {
     }, [] );
 
     return (
+        <div className="relative w-screen overflow-x-hidden">
         <MainLayout>
             <HeroSection />
             <AboutSection />
@@ -42,6 +43,7 @@ const App: React.FC = () => {
             <ExperienceSection />
             <ContactSection />
         </MainLayout>
+    </div>
     );
 };
 

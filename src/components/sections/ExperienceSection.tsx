@@ -58,7 +58,7 @@ const TimelineCarousel: React.FC = () => {
         >
             <FloatingParticles />
 
-            <SectionTitle title="Experience & Certifications" />
+            <SectionTitle planet="Venus" title="Experience & Certifications" />
 
             <div className="relative max-w-full mx-auto px-16">
                 {/* Left Arrow */ }

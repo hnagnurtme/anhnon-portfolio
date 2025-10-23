@@ -7,9 +7,12 @@ import FloatingParticles from "../ui/FloatingParticles";
 
 const AboutSection: React.FC = () => {
     return (
-        <section id="about" className="w-full md:py-12 bg-black text-white relative px-6 md:px-20 py-20">
+        <section
+            id="about"
+            className="w-full md:py-12 bg-black text-white relative px-6 md:px-16 py-20 overflow-x-hidden"
+        >
             <FloatingParticles />
-            <SectionTitle title="About Me" />
+            <SectionTitle planet="Saturn" title="About Me" />
 
             <div className="flex flex-col md:flex-row w-full gap-10 items-start">
 

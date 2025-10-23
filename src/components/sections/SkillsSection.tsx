@@ -50,7 +50,7 @@ const SkillsSection: React.FC = () => {
         <section id="skills" ref={sectionRef} className="w-full py-10 bg-gray-900 text-white">
             <FloatingParticles />
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <SectionTitle title="Skills" />
+                <SectionTitle planet="Mercury" title="Skills" />
                 <div ref={skillCardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {Object.entries(skillsData).map(([category, skills]) => (
                         <SkillCard key={category} category={category} skills={skills as string[]} />

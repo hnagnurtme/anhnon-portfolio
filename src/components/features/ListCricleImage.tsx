@@ -14,7 +14,7 @@ interface ListCircleImageProps {
 
 const ListCircleImage: React.FC<ListCircleImageProps> = ( {
     images,
-    interval = 2000,
+    interval = 4000,
 } ) => {
     const [ activeIndex, setActiveIndex ] = useState( 0 );
 

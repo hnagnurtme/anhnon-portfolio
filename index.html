@@ -1,52 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>anhnon-universe</title>
+    <title>Anhnon Universe</title>
+    <meta name="description"
+        content="Explore the universe of Nguyễn Trung Ánh — a passionate Java Developer showcasing projects, activities, and achievements." />
+    <meta name="keywords"
+        content="Nguyen Trung Anh, portfolio, Java developer, React, Spring Boot, web developer, Da Nang University" />
+    <meta name="author" content="Nguyễn Trung Ánh" />
+
+    <!-- 🪐 Favicon -->
+    <link rel="icon" type="image/png" href="/image/LOGO.png" />
+    <link rel="apple-touch-icon" href="/image/LOGO.png" />
+    <meta name="theme-color" content="#0a0a2a" />
+
+    <!-- 🌌 Open Graph (Facebook, Zalo, LinkedIn Preview) -->
+    <meta property="og:title" content="Anhnon Universe — Portfolio & Projects" />
+    <meta property="og:description"
+        content="Explore the universe of Nguyễn Trung Ánh — Java Developer with passion for backend, UI animation and creative projects." />
+    <meta property="og:image" content="https://hnagnurtme.id.vn/image/preview.png" />
+    <meta property="og:url" content="https://hnagnurtme.id.vn/" />
+    <meta property="og:type" content="website" />
+
+    <!-- 🐦 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anhnon Universe — Portfolio & Projects" />
+    <meta name="twitter:description"
+        content="Dive into Anhnon Universe — where creativity meets code. Projects, skills, and more!" />
+    <meta name="twitter:image" content="https://hnagnurtme.id.vn/image/preview.png" />
+
+    <!-- 🪐 Favicon -->
+    <link rel="icon" type="image/png" href="/image/LOGO.png" />
+
+    <!-- 🌌 Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
-      /* Tối ưu scroll không sử dụng CSS smooth scrolling */
-      html {
-        scroll-behavior: auto !important;
-      }
-      
-      body {
-        overflow-x: hidden;
-      }
-      
-      /* Khi có class này, tất cả animation sẽ bị vô hiệu hóa khi scroll */
-      .scrolling-active * {
-        animation-play-state: paused !important;
-        transition: none !important;
-      }
+        html {
+            scroll-behavior: auto !important;
+            background: radial-gradient(ellipse at top, #0a0a2a 0%, #000 100%);
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* 💤 Khi đang cuộn, tạm dừng tất cả animation */
+        .scrolling-active * {
+            animation-play-state: paused !important;
+            transition: none !important;
+            will-change: auto !important;
+        }
+
+        /* 🪞 Hiệu ứng chọn text nhẹ nhàng */
+        ::selection {
+            background: rgba(139, 92, 246, 0.3);
+            color: #fff;
+        }
+
+        /* 🌠 Tối ưu GPU cho Framer Motion */
+        * {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
     </style>
+
     <script>
-      // Script để xử lý pause animation chỉ khi scroll
-      document.addEventListener('DOMContentLoaded', function() {
-        let isScrolling = false;
-        let scrollTimeout;
-        
-        // Khi scroll, tạm dừng tất cả animation
-        window.addEventListener('scroll', function() {
-          if (!isScrolling) {
-            isScrolling = true;
-            document.body.classList.add('scrolling-active');
-          }
-          
-          clearTimeout(scrollTimeout);
-          
-          // Đặt lại timeout để nhận diện khi dừng scroll
-          scrollTimeout = setTimeout(function() {
-            isScrolling = false;
-            document.body.classList.remove('scrolling-active');
-          }, 150); // Đợi 150ms sau khi scroll dừng
-        }, { passive: true });
-      });
+        // 🧠 Script tạm dừng animation khi scroll để tránh lag
+        document.addEventListener( 'DOMContentLoaded', () => {
+            let scrollTimeout;
+            const body = document.body;
+
+            window.addEventListener(
+                'scroll',
+                () => {
+                    body.classList.add( 'scrolling-active' );
+                    clearTimeout( scrollTimeout );
+                    scrollTimeout = setTimeout( () => {
+                        body.classList.remove( 'scrolling-active' );
+                    }, 150 ); // resume sau khi dừng 150ms
+                },
+                { passive: true }
+            );
+        } );
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+</body>
+
 </html>
