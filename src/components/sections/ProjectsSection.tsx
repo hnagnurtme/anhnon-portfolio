@@ -4,6 +4,7 @@ import ProjectCard, { type Project } from "../features/projects/ProjectCard";
 import ProjectDetails from "../features/projects/ProjectDetails";
 import projectsData from "../../data/projects.json";
 import SectionTitle from "../ui/SectionTitle";
+import FloatingParticles from "../ui/FloatingParticles";
 
 const ProjectCarousel: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>( null! );
@@ -53,7 +54,7 @@ const ProjectCarousel: React.FC = () => {
             ref={ sectionRef }
             className="w-full py-8 md:py-12 bg-black text-white px-6 md:px-16 relative"
         >
-
+            <FloatingParticles />
             <SectionTitle title="Projects" />
 
             <div className="relative max-w-full mx-auto px-16">

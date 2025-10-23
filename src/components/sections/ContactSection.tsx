@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import personalData from "../../data/personal.json";
 import Input from "../ui/Input";
-
+import FloatingParticles from "../ui/FloatingParticles";
 const ContactSection: React.FC = () => {
     const [ formState, setFormState ] = useState( {
         name: "",
@@ -45,6 +45,7 @@ const ContactSection: React.FC = () => {
 
     return (
         <section id="contact" className="w-full py-10 bg-black text-white">
+            <FloatingParticles />
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <motion.h2
                     className="text-3xl font-bold text-center mb-8"
