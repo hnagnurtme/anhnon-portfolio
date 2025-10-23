@@ -15,12 +15,12 @@ const SectionTitle: React.FC<SectionTitleProps> = ( {
 } ) => {
     // 🪐 Map tên hành tinh -> ảnh PNG (đường dẫn chuẩn trong Vite)
     const planetImages: Record<string, string> = {
-        Mercury: "/src/assets/images/planet/mercury.png",
-        Venus: "/src/assets/images/planet/venus.png",
-        Mars: "/src/assets/images/planet/mars.png",
-        Jupiter: "/src/assets/images/planet/jupiter.png",
-        Saturn: "/src/assets/images/planet/saturn.png",
-        Neptune: "/src/assets/images/planet/neptune.png",
+        Mercury: "images/planet/mercury.png",
+        Venus: "images/planet/venus.png",
+        Mars: "images/planet/mars.png",
+        Jupiter: "images/planet/jupiter.png",
+        Saturn: "images/planet/saturn.png",
+        Neptune: "images/planet/neptune.png",
     };
 
     return (
