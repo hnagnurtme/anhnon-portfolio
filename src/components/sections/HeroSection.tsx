@@ -7,6 +7,7 @@ import { AnimationContext } from "../../store/AnimationContext";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import FloatingParticles from "../ui/FloatingParticles";
+import DownloadCVButton from "../ui/DownloadCVButton";
 
 // Register TextPlugin for GSAP
 gsap.registerPlugin( TextPlugin );
@@ -236,20 +237,7 @@ const HeroSection: React.FC = () => {
                         variants={ item }
                         className="flex gap-4 justify-center"
                     >
-                        <Button
-                            onClick={ () => activateSection( 'projects' ) }
-                            className="interactive"
-                        >
-                            <motion.span
-                                whileHover={ {
-                                    scale: 1.05,
-                                    transition: { duration: 0.3 }
-                                } }
-                            >
-                                View Portfolio
-                            </motion.span>
-                        </Button>
-
+                        <DownloadCVButton />
                         <Button
                             onClick={ () => activateSection( 'contact' ) }
                             className="bg-transparent border border-purple-500 text-white hover:bg-purple-500/20 interactive"

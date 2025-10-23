@@ -41,13 +41,13 @@ const ParticipationCard: React.FC = () => {
 
                 {/* Top 10% */ }
                 <div className="relative inline-block mb-2">
-  <p className="text-gray-300 text-sm sm:text-base">
-    Top 10% of <span className="font-semibold text-white relative z-10">NAVER AI Vietnam Hackathon 2025</span>
-  </p>
-  <span className="absolute -top-3 right-[-30px] text-xs text-gray-300 rotate-12 py-0.5 px-2 bg-purple-900/30 border border-purple-700/30 rounded-lg z-20">
-    continuing
-  </span>
-</div>
+                    <p className="text-gray-300 text-sm sm:text-base">
+                        Top 10% of <span className="font-semibold text-white relative z-10">NAVER AI Vietnam Hackathon 2025</span>
+                    </p>
+                    <span className="absolute -top-3 right-[-30px] text-xs text-gray-300 rotate-12 py-0.5 px-2 bg-purple-900/30 border border-purple-700/30 rounded-lg z-20">
+                        continuing
+                    </span>
+                </div>
                 <p className="text-gray-300 text-center text-sm sm:text-base leading-snug">
                     Participated in <span className="font-semibold text-white">APAC Solution Challenge 2025</span>
                 </p>
