@@ -104,8 +104,11 @@ const Header: React.FC = () => {
                     transition={ { duration: 0.5, delay: 0.2 } }
                     whileHover={ { scale: 1.1 } }
                 >
-                    <span className="text-purple-500">Anh</span>
-                    <span className="text-white">Non</span>
+                    <span className="text-purple-500">AnhNon </span>
+                    <span className="text-white">Universe</span>
+{/* 
+                    <span className="text-purple-500">Universe</span>
+                    <span className="text-white">Non</span> */}
                 </motion.div>
 
                 {/* Desktop Navigation */ }

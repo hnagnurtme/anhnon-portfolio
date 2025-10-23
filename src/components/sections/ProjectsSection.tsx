@@ -55,7 +55,7 @@ const ProjectCarousel: React.FC = () => {
             className="w-full py-8 md:py-12 bg-black text-white px-6 md:px-16 relative"
         >
             <FloatingParticles />
-            <SectionTitle title="Projects" />
+            <SectionTitle planet="Mars" title="Projects" />
 
             <div className="relative max-w-full mx-auto px-16">
                 {/* Left Arrow */ }
